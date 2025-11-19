@@ -14,7 +14,10 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">Kim Locklier</div>
+            <!-- <div class="logo">Kim Locklier</div> -->
+            <div class="logo">
+                <img src="images/kimbot_header2.png" alt="Kim Locklier - Accredited Mental Health Social Worker" class="logo-image">
+            </div>
             <button class="menu-toggle" id="menuToggle">
                 <span></span>
                 <span></span>
@@ -33,7 +36,7 @@
 
     <!-- Hero Section with Banner Image -->
     <section id="home" class="hero">
-        <img src="images/banner.png" alt="Kim Locklier - Accredited Mental Health Social Worker" class="banner-image">
+        <img src="images/banner2_kimbo.png" alt="Kim Locklier - Accredited Mental Health Social Worker" class="banner-image">
         <div class="hero-overlay">
             <!-- <button class="cta-button" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
                 Learn More
@@ -192,54 +195,71 @@
 </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p class="section-subtitle">Ready to Get Started?</p>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-item">
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Get In Touch</h2>
+        <p class="section-subtitle">Ready to Get Started?</p>
+
+<!-- TODO - hide email from bots -->      
+        <div class="contact-grid">
+            <!-- Left Column -->
+            <div class="contact-left">
+                <div class="contact-group">
+                    <div class="contact-item">
                         <h3>Email</h3>
-                        <p><a href="/cdn-cgi/l/email-protection#4d2e2223392c2e390d26242021222e262124283f632e2220"><span class="__cf_email__" data-cfemail="a5c6cacbd1c4c6d1e5ceccc8c9cac6cec9ccc0d78bc6cac8">[email&#160;protected]</span></a></p>
+                        <p><a href="mailto:contact@kimlocklier.com">contact@kimlocklier.com</a></p>
                     </div>
-                    <div class="info-item">
+                    <div class="contact-item">
                         <h3>Phone</h3>
-                        <p><a href="tel:+61 0427078973">+61 0427 078 973</a></p>
+                        <p><a href="tel:+61234567890">+61 2 3456 7890</a></p>
                     </div>
-                    <div class="info-item">
+                    <div class="contact-item">
                         <h3>Location</h3>
                         <p>Queensland, Australia</p>
                     </div>
-                    <div class="contact-info-box">
-                        <h3>Referrals</h3>
-                        <p>Email referrals to <a href="mailto:info@kimlocklier.com">referrals@kimlocklier.com</a></p>
-                    </div>
-                    <div class="info-item">
-                        <h3>Availability</h3>
-                        <p>Sessions available in person and via video consultation</p>
-                    </div>
                 </div>
 
+                <div class="contact-divider"></div>
+
+                <div class="contact-group">
+                    <div class="contact-item">
+                        <h3>Availability</h3>
+                        <p>Sessions available in person and via video consultation</p>
+                        <p>Monday and Tuesday between 9am-4pm</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Referrals</h3>
+                        <p>Please use below email for any referrals</p>
+                        <p><a href="mailto:referrals@kimlocklier.com">referrals@kimlocklier.com</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="contact-right">
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
-                        <label for="name">Name*</label>
+                        <label for="name">Name *</label>
                         <input type="text" id="name" name="name" required>
                     </div>
+
                     <div class="form-group">
-                        <label for="email">Email*</label>
+                        <label for="email">Email *</label>
                         <input type="email" id="email" name="email" required>
                     </div>
+
                     <div class="form-group">
-                        <label for="message">Message*</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
                     </div>
+
                     <button type="submit" class="submit-button">Send Message</button>
                 </form>
             </div>
-            <h2>Get In Touch</h2>
         </div>
-    </section>
+        <h2>Get in touch</h2>
+    </div>
+</section>
 
 <!-- Footer -->
     <footer class="footer">
