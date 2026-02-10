@@ -227,11 +227,9 @@ section {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(107, 68, 35, 0.3);
 }
-
 /* ===========================
    ABOUT SECTION
    =========================== */
-
 .about {
     background-color: var(--light-cream);
 }
