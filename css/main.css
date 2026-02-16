@@ -586,6 +586,16 @@ section {
     box-shadow: 0 4px 12px rgba(107, 68, 35, 0.2);
 }
 
+.professional-association {
+    margin-top: var(--spacing-sm);
+}
+
+.association-badge {
+    max-width: 120px;
+    height: auto;
+    display: block;
+}
+
 @media (max-width: 768px) {
     .contact-grid {
         grid-template-columns: 1fr;
@@ -594,6 +604,10 @@ section {
 
     .contact-right {
         padding: var(--spacing-md);
+    }
+
+    .association-badge {
+        max-width: 100px;
     }
 }
 
