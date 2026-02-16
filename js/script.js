@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const p4 = phoneLink.getAttribute('data-p4');
         const p5 = phoneLink.getAttribute('data-p5');
 
-        const phoneNumber = `${p5} ${p4}${p3} ${p2} ${p1}`;
+        const phoneNumber = `${p5} ${p4}${p3} ${p2} ${p1}`.replace(/\s+/g, ' ').trim();
         const phoneHref = phoneNumber.replace(/\s/g, '');
 
         phoneLink.textContent = phoneNumber;
