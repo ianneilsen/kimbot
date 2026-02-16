@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ========================================
-// CONTACT FORM HANDLING
+// CONTACT FORM HANDLING (Netlify Forms)
 // ========================================
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -68,27 +68,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
             // Get form values
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
 
-            // Basic validation
+            // Basic validation - only prevent submission if validation fails
             if (!name || !email || !message) {
-                showMessage('Please fill in all fields', 'error');
+                e.preventDefault();
+                showMessage('Please fill in all required fields', 'error');
                 return;
             }
 
             // Validate email format
             if (!isValidEmail(email)) {
+                e.preventDefault();
                 showMessage('Please enter a valid email address', 'error');
                 return;
             }
 
-            // Submit form (you can integrate with a backend service)
-            submitForm(name, email, message);
+            // If validation passes, show sending state and let Netlify handle submission
+            const submitButton = document.querySelector('.submit-button');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            // Form will now submit to Netlify naturally
+            // Netlify will redirect to a success page or show their default thank you message
         });
     }
 });
@@ -99,31 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
-}
-
-/**
- * Submit form data
- * Note: For production, integrate with a backend service like Netlify Forms or EmailJS
- */
-function submitForm(name, email, message) {
-    // Simulate form submission
-    const submitButton = document.querySelector('.submit-button');
-    const originalText = submitButton.textContent;
-    
-    submitButton.disabled = true;
-    submitButton.textContent = 'Sending...';
-
-    // Simulate API call (200ms delay)
-    setTimeout(() => {
-        showMessage('Thank you! Your message has been sent successfully. We will get back to you soon.', 'success');
-        
-        // Reset form
-        document.getElementById('contactForm').reset();
-        
-        // Reset button
-        submitButton.disabled = false;
-        submitButton.textContent = originalText;
-    }, 800);
 }
 
 /**

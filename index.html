@@ -225,27 +225,39 @@
 
             <!-- Right Column -->
             <div class="contact-right">
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact" />
+
+                    <!-- Honeypot spam protection -->
+                    <p hidden>
+                        <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                    </p>
+
                     <div class="form-group">
                         <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" required autocomplete="name">
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel">
                     </div>
 
                     <div class="form-group">
                         <label for="message">Message *</label>
-                        <textarea id="message" name="message" rows="6" required></textarea>
+                        <textarea id="message" name="message" rows="6" required placeholder="Tell us how we can help you..."></textarea>
                     </div>
 
                     <button type="submit" class="submit-button">Send Message</button>
+                    <p class="privacy-notice" style="margin-top: 12px; font-size: 0.875rem; color: #64748b;">We respect your privacy and only use your details to respond to your enquiry.</p>
                 </form>
             </div>
         </div>
-        <h2>Get in touch</h2>
     </div>
 </section>
 
