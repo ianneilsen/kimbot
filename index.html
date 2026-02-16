@@ -36,7 +36,10 @@
 
     <!-- Hero Section with Banner Image -->
     <section id="home" class="hero">
-        <img src="images/Letterhead_top.jpg" alt="Kim Locklier - Accredited Mental Health Social Worker" class="banner-image">
+        <picture>
+            <source media="(min-width: 768px)" srcset="images/Banner_big.jpg">
+            <img src="images/Banner_small.jpg" alt="Kim Locklier - Accredited Mental Health Social Worker" class="banner-image">
+        </picture>
         <div class="hero-overlay">
              <button class="cta-button" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
                 Learn More
@@ -170,14 +173,12 @@
             <div class="faq-item">
                 <h4>What's the cancellation policy?</h4>
                 <ul class="sub-list">
-                    <li>72+ hours notice: No fee</li>
-                    <li>Less than 72 hours: 50% of session fee</li>
-                    <li>Same-day or no-show: Full session fee</li>
+                    <li>Notice period for cancellation or to re-schedule is a minimum of 24 hours, no penalty incurred.</li>
+                    <li>Late cancellation (less than 24 hours) and no shows, will incur a fee of 50% of session price.</li>
                 </ul>
             </div>
             <div class="faq-item">
                 <h4>Other billing types?</h4>
-                <p>Yes, we accept private health insurance, NDIS (self-managed & plan-managed), WorkCover, DVA, and EAP referrals.</p>
                 <p>Other rebates may be available to you if you have private health insurance or eligibility with DVA.</p>
             </div>
         </div>
