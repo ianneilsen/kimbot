@@ -220,6 +220,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ========================================
+// PHONE NUMBER PROTECTION
+// ========================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    const phoneLink = document.getElementById('phoneLink');
+    if (phoneLink) {
+        const p1 = phoneLink.getAttribute('data-p1');
+        const p2 = phoneLink.getAttribute('data-p2');
+        const p3 = phoneLink.getAttribute('data-p3');
+        const p4 = phoneLink.getAttribute('data-p4');
+        const p5 = phoneLink.getAttribute('data-p5');
+
+        const phoneNumber = `${p5} ${p4}${p3} ${p2} ${p1}`;
+        const phoneHref = phoneNumber.replace(/\s/g, '');
+
+        phoneLink.textContent = phoneNumber;
+        phoneLink.href = `tel:${phoneHref}`;
+    }
+});
+
+// ========================================
 // ADD ANIMATIONS CSS
 // ========================================
 
