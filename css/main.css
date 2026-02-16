@@ -446,6 +446,19 @@ section {
     margin-bottom: 0;
 }
 
+.faq-item a {
+    color: var(--secondary-brown);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: var(--secondary-brown);
+    text-underline-offset: 2px;
+}
+
+.faq-item a:hover {
+    color: var(--primary-brown);
+    text-decoration-color: var(--primary-brown);
+}
+
 .sub-list {
     list-style: none;
     margin-top: var(--spacing-sm);
